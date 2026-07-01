@@ -1,0 +1,96 @@
+/* Reset Default Styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Form Container */
+form{
+    background-color: white;
+    width: 400px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Space Between Fields */
+form div{
+    margin-bottom: 18px;
+}
+
+/* Labels */
+label,
+span{
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input Fields */
+input,
+select{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+/* Focus Effect */
+input:focus,
+select:focus{
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76,175,80,0.5);
+}
+
+/* Gender Section */
+input[type="radio"]{
+    width: auto;
+    margin-right: 5px;
+}
+
+div label:has(input[type="radio"]){
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+/* Submit Button */
+button{
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button Hover */
+button:hover{
+    background-color: #388e3c;
+}
+
+/* Mobile Responsive */
+@media (max-width: 450px){
+    form{
+        width: 90%;
+        padding: 20px;
+    }
+}
