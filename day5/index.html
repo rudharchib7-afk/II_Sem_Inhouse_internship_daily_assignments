@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Directory</title>
+    
+<link rel="stylesheet" href="style.css" >
+  </head>
+  <body>
+
+    <nav class="navbar">
+      <div class="nav-inner">
+        <a class="brand" href="#">
+          <span class="brand-badge">🎓</span>
+          <span>Student Directory</span>
+        </a>
+        <button id="themeToggle" class="theme-btn" type="button" aria-label="Toggle theme">🌙</button>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section class="hero">
+        <div class="hero-card">
+          <h1>Explore Student Records</h1>
+          <p>Search across names, roll numbers, college IDs, and batch names with a fast, accessible interface designed for every screen size.</p>
+        </div>
+        <div class="controls">
+          <div class="search-row">
+            <input id="searchInput" class="search-input" type="text" placeholder="Search students..." />
+            <select id="filterSelect" class="filter-select" aria-label="Search field">
+              <option value="all">All Fields</option>
+              <option value="name">Name</option>
+              <option value="rollNumber">Roll Number</option>
+              <option value="collegeId">College ID</option>
+              <option value="batch">Batch</option>
+            </select>
+          </div>
+          <div class="stats">
+            <span class="chip" id="resultsCount">0 results</span>
+            <span class="chip" id="visibleCount">0 visible</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="studentGrid" class="student-grid" aria-live="polite"></section>
+    </main>
+
+
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
