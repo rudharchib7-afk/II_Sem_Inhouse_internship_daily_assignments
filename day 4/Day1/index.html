@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Portfolio of Rudhar Partap Singh Chib - Computer Science Student, Developer, and Designer.">
+    <title>Rudhar Partap Singh Chib | Personal Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header id="main-header" class="header">
+        <div class="header-container">
+            <a href="#hero" id="logo-link" class="logo">RPSC<span>.</span></a>
+            <nav id="navbar" class="nav">
+                <ul class="nav-list">
+                    <li><a href="#hero" id="nav-home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" id="nav-about" class="nav-link">About</a></li>
+                    <li><a href="#skills" id="nav-skills" class="nav-link">Skills</a></li>
+                    <li><a href="#contact" id="nav-contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg-glow"></div>
+            <div class="hero-container">
+                <p id="hero-welcome" class="welcome-text">Hello, I'm</p>
+                <h1 id="hero-title" class="hero-name">Rudhar Partap Singh Chib</h1>
+                <h2 id="hero-subtitle" class="hero-role">Computer Science Student &amp; Web Developer</h2>
+                <p id="hero-description" class="hero-bio">
+                    Crafting visually stunning, highly performant, and accessible digital experiences. Passionate about software engineering, clean code, and solving complex problems.
+                </p>
+                <div class="hero-actions">
+                    <a href="#about" id="btn-explore" class="btn btn-primary">Explore My Work</a>
+                    <a href="#contact" id="btn-connect" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 id="about-heading" class="section-title">About Me</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="about-content">
+                    <div class="about-text-wrapper">
+                        <p id="about-p1" class="about-p">
+                            I am a student currently pursuing my Bachelor of Technology (B.Tech) in Computer Science &amp; Engineering. I'm exploring the latest technologies in web development, database management, and software design.
+                        </p>
+                        <p id="about-p2" class="about-p">
+                            My goal is to bridge the gap between aesthetics and function in software engineering, creating interfaces that feel alive, intuitive, and modern. Outside of coding, I enjoy learning about system architecture and computer hardware.
+                        </p>
+                        <div class="details-grid">
+                            <div class="detail-item">
+                                <span class="detail-label">Roll Number:</span>
+                                <span id="detail-roll" class="detail-value">25ESKCS293</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Interests:</span>
+                                <span id="detail-interests" class="detail-value">Web Tech, C++, Algorithms</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 id="skills-heading" class="section-title">Core Skills</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="skills-grid">
+                    <!-- HTML5 -->
+                    <div class="skill-card" id="skill-card-html">
+                        <div class="skill-icon-wrapper html-icon">
+                            <span class="skill-icon">HTML5</span>
+                        </div>
+                        <h3 class="skill-name">HTML5</h3>
+                        <p class="skill-description">Semantic markup, accessibility, and modern SEO structures.</p>
+                    </div>
+
+                    <!-- CSS3 -->
+                    <div class="skill-card" id="skill-card-css">
+                        <div class="skill-icon-wrapper css-icon">
+                            <span class="skill-icon">CSS3</span>
+                        </div>
+                        <h3 class="skill-name">CSS3</h3>
+                        <p class="skill-description">Responsive grid layouts, flexbox, transitions, and animations.</p>
+                    </div>
+
+                    <!-- C++ -->
+                    <div class="skill-card" id="skill-card-cpp">
+                        <div class="skill-icon-wrapper cpp-icon">
+                            <span class="skill-icon">C++</span>
+                        </div>
+                        <h3 class="skill-name">C++ Programming</h3>
+                        <p class="skill-description">Data structures, object-oriented concepts, and algorithmic thinking.</p>
+                    </div>
+
+                    <!-- Web Development -->
+                    <div class="skill-card" id="skill-card-webdev">
+                        <div class="skill-icon-wrapper web-icon">
+                            <span class="skill-icon">JS / PHP</span>
+                        </div>
+                        <h3 class="skill-name">Web Development</h3>
+                        <p class="skill-description">Building dynamic clients and scripting backend logic with PHP/XAMPP.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 id="contact-heading" class="section-title">Let's Connect</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="contact-card">
+                    <p class="contact-lead">Have an exciting project or want to collaborate?</p>
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <span class="info-label">Name:</span>
+                            <span id="contact-name" class="info-value">Rudhar Partap Singh Chib</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">GitHub:</span>
+                            <span id="contact-github" class="info-value">
+                                <a href="https://github.com/rudharchib7-afk" target="_blank" rel="noopener">rudharchib7-afk</a>
+                            </span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Assignment Repo:</span>
+                            <span id="contact-repo" class="info-value">
+                                <a href="https://github.com/rudharchib7-afk/internship" target="_blank" rel="noopener">rudharchib7-afk/internship</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer" class="footer">
+        <div class="footer-container">
+            <p id="footer-text">&copy; 2026 Rudhar Partap Singh Chib. II Semester Inhouse Internship. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Active Navigation Highlight Script -->
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    if (pageYOffset >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

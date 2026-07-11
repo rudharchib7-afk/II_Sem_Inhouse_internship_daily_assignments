@@ -1,0 +1,7 @@
+{
+  "php.validate.executablePath": "C:/Users/chib_/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.3_Microsoft.Winget.Source_8wekyb3d8bbwe/php.exe",
+  "php.executables": [
+    "C:/Users/chib_/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.3_Microsoft.Winget.Source_8wekyb3d8bbwe/php.exe"
+  ],
+  "php.debug.executablePath": "C:/Users/chib_/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.3_Microsoft.Winget.Source_8wekyb3d8bbwe/php.exe"
+}

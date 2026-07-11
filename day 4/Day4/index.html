@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="registration-form">
+    <div class="form-header">
+      <h1>College Registration Form</h1>
+      <p>Fill in your details to register.</p>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="true">🌙 Dark Mode</button>
+    </div>
+
+    <form>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" data-required="true" data-label="First Name" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" data-required="true" data-label="Last Name" required>
+        </div>
+        <div class="form-group">
+          <label for="studentId">Student ID</label>
+          <input type="text" id="studentId" name="studentId" data-required="true" data-label="Student ID" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" data-required="true" data-label="Email Address" required>
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" data-required="true" data-label="Date of Birth" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" data-required="true" data-label="Phone Number" required>
+        </div>
+        <div class="form-group">
+          <label for="department">Department</label>
+          <select id="department" name="department" data-required="true" data-label="Department" required>
+            <option value="">Select Department</option>
+            <option value="computer-science">Computer Science</option>
+            <option value="business">Business Administration</option>
+            <option value="engineering">Engineering</option>
+            <option value="arts">Arts & Humanities</option>
+            <option value="sciences">Sciences</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="year">Year of Study</label>
+          <select id="year" name="year" data-required="true" data-label="Year of Study" required>
+            <option value="">Select Year</option>
+            <option value="1">First Year</option>
+            <option value="2">Second Year</option>
+            <option value="3">Third Year</option>
+            <option value="4">Fourth Year</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group full-width">
+        <label for="course">Desired Course</label>
+        <select id="course" name="course" data-required="true" data-label="Desired Course" required>
+          <option value="">Select Course</option>
+          <option value="web-development">Web Development</option>
+          <option value="data-science">Data Science</option>
+          <option value="marketing">Marketing</option>
+          <option value="accounting">Accounting</option>
+          <option value="design">Graphic Design</option>
+        </select>
+      </div>
+      <div class="form-group full-width">
+        <label for="address">Address</label>
+        <textarea id="address" name="address" data-required="true" data-label="Address" required></textarea>
+      </div>
+
+      <div class="form-footer">
+        <button type="submit" class="primary-button">Submit Registration</button>
+        <button type="reset" class="secondary-button">Clear Form</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

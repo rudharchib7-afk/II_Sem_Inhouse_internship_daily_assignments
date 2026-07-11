@@ -1,0 +1,440 @@
+/* ===================================
+   GOOGLE FONT
+=================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===================================
+   RESET
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===================================
+   BODY
+=================================== */
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+    background:linear-gradient(-45deg,#4facfe,#00f2fe,#8e44ad,#ff6ec4);
+
+    background-size:400% 400%;
+
+    animation:gradientMove 12s ease infinite;
+
+}
+
+/* ===================================
+   CONTAINER
+=================================== */
+
+.container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ===================================
+   FORM
+=================================== */
+
+.register-form{
+
+    width:700px;
+
+    background:rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.3);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+    animation:fadeIn 1s ease;
+
+}
+
+/* ===================================
+   HEADING
+=================================== */
+
+.register-form h1{
+
+    text-align:center;
+
+    color:white;
+
+    margin-bottom:8px;
+
+    font-size:35px;
+
+}
+
+.register-form p{
+
+    text-align:center;
+
+    color:#f2f2f2;
+
+    margin-bottom:30px;
+
+}
+
+/* ===================================
+   INPUT BOX
+=================================== */
+
+.input-box{
+
+    margin-bottom:20px;
+
+}
+
+.input-box label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:white;
+
+    font-weight:500;
+
+}
+
+/* ===================================
+   INPUTS
+=================================== */
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.18);
+
+    color:white;
+
+    font-size:15px;
+
+    transition:.4s;
+
+}
+
+/* Placeholder */
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#eeeeee;
+
+}
+
+/* Focus */
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    background:rgba(255,255,255,.28);
+
+    transform:scale(1.02);
+
+    box-shadow:0 0 15px cyan;
+
+}
+
+/* ===================================
+   RADIO GROUP
+=================================== */
+
+.radio-group{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.radio-group label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    cursor:pointer;
+
+}
+
+/* ===================================
+   CHECKBOX GROUP
+=================================== */
+
+.checkbox-group{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:10px;
+
+}
+
+.checkbox-group label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    cursor:pointer;
+
+}
+
+/* ===================================
+   SMALL INPUTS
+=================================== */
+
+input[type="radio"],
+input[type="checkbox"]{
+
+    width:auto;
+
+    accent-color:#00ffff;
+
+    transform:scale(1.2);
+
+}
+
+/* ===================================
+   TERMS
+=================================== */
+
+.terms{
+
+    margin:20px 0;
+
+}
+
+.terms label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:white;
+
+}
+
+/* ===================================
+   BUTTON
+=================================== */
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:white;
+
+    background:linear-gradient(45deg,#00c6ff,#0072ff);
+
+    transition:.4s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Shine Effect */
+
+button::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-120%;
+
+    top:0;
+
+    width:50%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.4);
+
+    transform:skewX(-25deg);
+
+    transition:.8s;
+
+}
+
+button:hover::before{
+
+    left:150%;
+
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.35);
+
+}
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+/* ===================================
+   SCROLLBAR
+=================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#00c6ff;
+
+    border-radius:20px;
+
+}
+
+/* ===================================
+   KEYFRAMES
+=================================== */
+
+@keyframes gradientMove{
+
+0%{
+
+background-position:0% 50%;
+
+}
+
+50%{
+
+background-position:100% 50%;
+
+}
+
+100%{
+
+background-position:0% 50%;
+
+}
+
+}
+
+@keyframes fadeIn{
+
+0%{
+
+opacity:0;
+
+transform:translateY(60px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.register-form{
+
+width:100%;
+
+padding:25px;
+
+}
+
+.checkbox-group{
+
+grid-template-columns:1fr;
+
+}
+
+.radio-group{
+
+flex-direction:column;
+
+gap:10px;
+
+}
+
+.register-form h1{
+
+font-size:28px;
+
+}
+
+}

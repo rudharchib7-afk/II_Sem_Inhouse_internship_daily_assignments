@@ -1,0 +1,303 @@
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+    color:#333;
+    line-height:1.6;
+}
+
+/* Header */
+.header{
+    background:#222;
+    padding:15px 0;
+}
+
+.header-container{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.logo span{
+    color:orange;
+}
+
+.nav-list{
+    display:flex;
+    list-style:none;
+}
+
+.nav-list li{
+    margin-left:20px;
+}
+
+.nav-link{
+    text-decoration:none;
+    color:white;
+}
+
+.nav-link:hover{
+    color:orange;
+}
+
+/* Common Section */
+section{
+    padding:60px 20px;
+}
+
+.section-container{
+    width:90%;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.title-underline{
+    width:80px;
+    height:4px;
+    background:orange;
+    margin:0 auto 40px;
+}
+
+/* Hero */
+.hero-section{
+    text-align:center;
+    background:#ffffff;
+    padding:100px 20px;
+}
+
+.hero-name{
+    font-size:45px;
+    margin:10px 0;
+}
+
+.hero-role{
+    color:#555;
+    margin-bottom:20px;
+}
+
+.hero-bio{
+    max-width:700px;
+    margin:auto;
+}
+
+.hero-actions{
+    margin-top:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:5px;
+    margin:10px;
+}
+
+.btn-primary{
+    background:orange;
+    color:white;
+}
+
+.btn-secondary{
+    background:#333;
+    color:white;
+}
+
+.btn:hover{
+    opacity:0.8;
+}
+
+/* About */
+.about-content{
+    text-align:center;
+}
+
+.about-p{
+    margin-bottom:20px;
+}
+
+.details-grid{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-top:20px;
+}
+
+/* Skills */
+.skills-grid{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.skill-card{
+    width:220px;
+    background:white;
+    padding:20px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.skill-card:hover{
+    transform:translateY(-5px);
+}
+
+/* Testimonials */
+.testimonials-grid{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.testimonial-card{
+    width:300px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Pricing */
+.pricing-grid{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.pricing-card{
+    width:280px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.pricing-features{
+    list-style:none;
+    margin:20px 0;
+}
+
+.pricing-features li{
+    margin:10px 0;
+}
+
+/* FAQ */
+.faq-item{
+    background:white;
+    margin-bottom:15px;
+    padding:15px;
+    border-radius:5px;
+}
+
+.faq-question{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    border:none;
+    background:none;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.faq-answer{
+    margin-top:10px;
+}
+
+/* Social */
+.social-links{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.social-link{
+    background:white;
+    padding:15px 25px;
+    text-decoration:none;
+    color:#333;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.social-link:hover{
+    background:orange;
+    color:white;
+}
+
+/* Contact */
+.contact-card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    max-width:600px;
+    margin:auto;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.info-item{
+    margin:15px 0;
+}
+
+/* Footer */
+.footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .header-container{
+        flex-direction:column;
+    }
+
+    .nav-list{
+        flex-direction:column;
+        align-items:center;
+        margin-top:15px;
+    }
+
+    .nav-list li{
+        margin:10px 0;
+    }
+
+    .skills-grid,
+    .pricing-grid,
+    .testimonials-grid,
+    .details-grid,
+    .social-links{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero-name{
+        font-size:35px;
+    }
+}

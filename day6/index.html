@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Demo Project</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            background:#f4f6f9;
+        }
+
+        .student-card img{
+            height:220px;
+            object-fit:cover;
+        }
+
+        footer{
+            background:#212529;
+            color:white;
+            padding:15px;
+            margin-top:40px;
+        }
+
+        .section{
+            margin-top:40px;
+        }
+
+        pre{
+            background:#222;
+            color:#00ff00;
+            padding:15px;
+            border-radius:8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= Navbar ================= -->
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+        <span class="navbar-brand">
+            Student Directory + JavaScript Examples
+        </span>
+    </div>
+</nav>
+
+<div class="container mt-5">
+
+    <!-- ================= Search ================= -->
+
+    <div class="row mb-4">
+        <div class="col-md-6 mx-auto">
+            <input
+                type="text"
+                id="searchInput"
+                class="form-control"
+                placeholder="Search Student..."
+            >
+        </div>
+    </div>
+
+    <!-- ================= Student Cards ================= -->
+
+    <div class="row" id="studentContainer">
+
+        <div class="col-md-4 mb-4 student-item">
+            <div class="card student-card shadow">
+                <img src="https://i.pravatar.cc/300?img=1" class="card-img-top">
+
+                <div class="card-body text-center">
+                    <h5 class="card-title">Amit Sharma</h5>
+                    <p>Web Development</p>
+                    <p class="text-muted">amit@example.com</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4 student-item">
+            <div class="card student-card shadow">
+                <img src="https://i.pravatar.cc/300?img=2" class="card-img-top">
+
+                <div class="card-body text-center">
+                    <h5 class="card-title">Neha Verma</h5>
+                    <p>JavaScript</p>
+                    <p class="text-muted">neha@example.com</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4 student-item">
+            <div class="card student-card shadow">
+                <img src="https://i.pravatar.cc/300?img=3" class="card-img-top">
+
+                <div class="card-body text-center">
+                    <h5 class="card-title">Rahul Singh</h5>
+                    <p>React</p>
+                    <p class="text-muted">rahul@example.com</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<footer class="text-center">
+    © 2026 Student Directory | JavaScript Demo Project
+</footer>
+
+<script>
+
+//////////////////////////////////////////////////////
+// SEARCH
+//////////////////////////////////////////////////////
+
+const searchInput = document.getElementById("searchInput");
+const studentsCard = document.querySelectorAll(".student-item");
+
+searchInput.addEventListener("keyup", function(){
+
+    let value = this.value.toLowerCase();
+
+    studentsCard.forEach(function(student){
+
+        let name = student.querySelector(".card-title").textContent.toLowerCase();
+
+        if(name.includes(value))
+            student.style.display="block";
+        else
+            student.style.display="none";
+
+    });
+
+});
+
+//////////////////////////////////////////////////////
+// MAP EXAMPLE
+//////////////////////////////////////////////////////
+
+let numbers=[1,2,3,4];
+
+let oldWay=[];
+
+for(let i=0;i<numbers.length;i++)
+{
+    oldWay.push(numbers[i]*2);
+}
+
+console.log("Without Map :",oldWay);
+
+let newWay=numbers.map(function(value){
+
+    return value*2;
+
+});
+
+console.log("With Map :",newWay);
+
+//////////////////////////////////////////////////////
+// PROMISE EXAMPLE
+//////////////////////////////////////////////////////
+
+let promise1=new Promise(function(resolve,reject){
+
+    let internet=true;
+
+    if(internet)
+        resolve("Data received successfully.");
+    else
+        reject("Internet Error.");
+
+});
+
+promise1
+.then(function(data){
+
+    console.log(data);
+
+})
+.catch(function(error){
+
+    console.log(error);
+
+});
+
+//////////////////////////////////////////////////////
+// PROMISE WITH TIMEOUT
+//////////////////////////////////////////////////////
+
+let promise2=new Promise(function(resolve){
+
+    setTimeout(function(){
+
+        resolve("Promise completed after 2 seconds.");
+
+    },2000);
+
+});
+
+promise2.then(function(message){
+
+    console.log(message);
+
+});
+
+//////////////////////////////////////////////////////
+// JSON OBJECT
+//////////////////////////////////////////////////////
+
+const students=[
+
+{
+    name:"Harsh",
+    branch:"CSE",
+    rollno:1234,
+    marks:90,
+    skills:["HTML","CSS","JS"]
+},
+
+{
+    name:"Virat",
+    branch:"CSE",
+    rollno:1235,
+    marks:95,
+    skills:["PHP","React","Node"]
+},
+
+{
+    name:"Kamal",
+    branch:"ECE",
+    rollno:1236,
+    marks:85,
+    skills:["Java","Go","Python"]
+}
+
+];
+
+console.log("JavaScript Object");
+console.log(students);
+
+//////////////////////////////////////////////////////
+// JSON.stringify()
+//////////////////////////////////////////////////////
+
+let jsonData=JSON.stringify(students,null,2);
+
+console.log("JSON String");
+console.log(jsonData);
+
+//////////////////////////////////////////////////////
+// JSON.parse()
+//////////////////////////////////////////////////////
+
+let parsedData=JSON.parse(jsonData);
+
+console.log("JSON Parsed");
+console.log(parsedData);
+
+</script>
+
+</body>
+</html>
