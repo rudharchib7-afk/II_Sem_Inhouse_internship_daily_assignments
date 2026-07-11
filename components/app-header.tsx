@@ -12,7 +12,7 @@ type AppHeaderProps = {
 
 export function AppHeader({ isAuthenticated = false, userEmail, onLogout }: AppHeaderProps) {
   return (
-    <header className="sticky top-0 z-40 border-b border-border/70 bg-background/75 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 glass-header">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <div className="flex items-center gap-2.5">
           <div className="flex size-9 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm shadow-primary/30">
@@ -24,17 +24,19 @@ export function AppHeader({ isAuthenticated = false, userEmail, onLogout }: AppH
           </div>
         </div>
 
-        <nav className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
-          <a href="#generator" className="transition-colors hover:text-foreground">
-            Generator
-          </a>
-          <a href="#how-it-works" className="transition-colors hover:text-foreground">
-            How it works
-          </a>
-          <a href="#faq" className="transition-colors hover:text-foreground">
-            FAQ
-          </a>
-        </nav>
+        {isAuthenticated ? (
+          <nav className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
+            <a href="#generator" className="transition-colors hover:text-foreground">
+              Generator
+            </a>
+            <a href="#how-it-works" className="transition-colors hover:text-foreground">
+              How it works
+            </a>
+            <a href="#faq" className="transition-colors hover:text-foreground">
+              FAQ
+            </a>
+          </nav>
+        ) : null}
 
         <div className="flex items-center gap-2">
           {isAuthenticated ? (
@@ -47,21 +49,7 @@ export function AppHeader({ isAuthenticated = false, userEmail, onLogout }: AppH
                 Log out
               </Button>
             </>
-          ) : (
-            <>
-              <Button
-                variant="ghost"
-                size="sm"
-                className="hidden sm:inline-flex"
-                render={<a href="#login" />}
-              >
-                Sign in
-              </Button>
-              <Button size="sm" render={<a href="#generator" />}>
-                Start free
-              </Button>
-            </>
-          )}
+          ) : null}
         </div>
       </div>
     </header>

@@ -5,7 +5,7 @@ A Next.js product description generator with a simple cookie-based login/logout 
 ## Features
 
 - Product description generator UI
-- Auth shell with demo login/logout
+- Authenticated product-generation API with cookie-based login/logout
 - Responsive landing page and product workbench
 - GitHub-ready structure for deployment
 
@@ -15,6 +15,9 @@ Use these credentials for the built-in demo auth:
 
 - Email: `admin@describely.com`
 - Password: `Describely123!`
+
+For deployment, set `AUTH_EMAIL`, `AUTH_PASSWORD`, and a long, unique
+`AUTH_SESSION_SECRET` value. The session secret signs the login cookie.
 
 ## Local development
 
@@ -40,6 +43,7 @@ Recommended flow:
 3. Add the environment variables:
    - `AUTH_EMAIL`
    - `AUTH_PASSWORD`
+   - `AUTH_SESSION_SECRET`
 4. Deploy.
 
 Vercel will generate a public URL like:

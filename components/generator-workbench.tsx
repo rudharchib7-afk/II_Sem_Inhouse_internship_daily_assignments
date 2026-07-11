@@ -4,7 +4,6 @@ import { useState } from "react"
 import { Sparkles, Wand2, RotateCcw, FileText, Loader2 } from "lucide-react"
 
 import {
-  generateDescriptions,
   LENGTHS,
   TONES,
   type GeneratedDescription,
@@ -46,20 +45,32 @@ export function GeneratorWorkbench() {
 
   const [results, setResults] = useState<GeneratedDescription[] | null>(null)
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState("")
 
   const canGenerate = name.trim().length > 0 && category.trim().length > 0
 
-  function handleGenerate() {
+  async function handleGenerate() {
     if (!canGenerate) return
     setLoading(true)
     setResults(null)
-    // Simulate an AI request round-trip
-    setTimeout(() => {
-      setResults(
-        generateDescriptions({ name, category, audience, features, keywords, tone, length }),
-      )
+    setError("")
+    try {
+      const response = await fetch('/api/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, category, audience, features, keywords, tone, length }),
+      })
+      const payload = (await response.json()) as { success?: boolean; message?: string; results?: GeneratedDescription[] }
+      if (!response.ok || !payload.success || !payload.results) {
+        setError(payload.message ?? 'Unable to generate descriptions right now.')
+        return
+      }
+      setResults(payload.results)
+    } catch {
+      setError('Unable to reach the server. Please try again.')
+    } finally {
       setLoading(false)
-    }, 1100)
+    }
   }
 
   function loadSample() {
@@ -82,6 +93,7 @@ export function GeneratorWorkbench() {
     setTone("professional")
     setLength("medium")
     setResults(null)
+    setError("")
   }
 
   return (
@@ -214,6 +226,11 @@ export function GeneratorWorkbench() {
               {!canGenerate && (
                 <p className="text-xs text-muted-foreground">
                   Add a product name and category to get started.
+                </p>
+              )}
+              {error && (
+                <p className="rounded-xl border border-destructive/40 bg-destructive/8 px-3 py-2 text-xs text-destructive">
+                  {error}
                 </p>
               )}
             </div>
